@@ -1,0 +1,16 @@
+.container {
+    width: 90%;
+    margin-left: 5%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.logo {
+    align-self: flex-start;
+}
+
+.nav {
+    width: 20%;
+    display:flex;
+    justify-content: space-evenly;
+}
