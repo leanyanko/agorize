@@ -1,0 +1,16 @@
+.product {
+    width: 30%;
+    border: 1px solid grey;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.description {
+    height: 160px;
+}
+
+/* font-size: calc(3px + 2vmin); */
+
+button {
+
+}

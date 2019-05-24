@@ -1,26 +1,25 @@
 import React from 'react';
-import './Products.css';
+import './Product.css';
 
 class Product extends React.Component {
     constructor(){
         super();
-        this.state = {
-            
-        }
+        this.state = {}
     }
 
-    componentDidMount() {
-     
-    }
-
-    
 
     render() {
         return (
-            <div>
-                {this.props.name}
-                <img src={this.props.img}/>
-                {this.props.description}
+            <div className="product">
+                <img src={this.props.img} width="100%"/>
+                <div>
+                   {this.props.name}
+                   <div className="description">
+                        {this.props.description} 
+                   </div> 
+                   
+                </div>
+                <button>ADD TO CARD</button>
             </div>
         );
     }

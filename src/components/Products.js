@@ -29,7 +29,7 @@ class Products extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="products">
                 {!this.state.products || this.state.products.length == 0? <span className="empty">Thre is no products currently</span> : 
                 this.state.products.map( product => {
                     return (<Product key={product.id} name={product.name} img={product.img} description={product.description}/>)
