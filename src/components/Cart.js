@@ -9,7 +9,8 @@ class Cart extends React.Component {
             items: [],
             size: 0
         }
-        this.remove.bind(this); 
+        this.remove = this.remove.bind(this); 
+
     }
 
     remove(id) {
@@ -17,6 +18,8 @@ class Cart extends React.Component {
         const amount = JSON.parse(localStorage.getItem('ids')).filter(item => item.id === id)[0].amount;
         localStorage.setItem('ids', JSON.stringify(items));
         localStorage.setItem('size', +localStorage.getItem('size') - amount);
+        this.setState({items: JSON.parse(localStorage.getItem('ids'))});
+
     }
 
     render() {

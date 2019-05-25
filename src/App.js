@@ -1,11 +1,13 @@
 import React from 'react';
+import logo from './logo.svg';
 import './App.css';
 import Cart from './components/Cart';
 import Navigation from './components/Navigation';
-import ProductsR from './components/ProductsR';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import Products from './components/Products';
+import ReactDOM from 'react-dom'
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
-function App(appProps) {
+function App() {
   return (
     <div className="App">
       
@@ -13,8 +15,8 @@ function App(appProps) {
           <div className="header"><Navigation/></div>
         
           <div className="content">
-            <Route exact path="/" render={(props) => <ProductsR {...appProps} />} />
-            {/* <Route path="/products" component={ProductsR} /> */}
+            <Route exact path="/" component={Products} />
+            <Route path="/products" component={Products} />
             <Route path="/cart" component={Cart} />
           </div>
         </Router>

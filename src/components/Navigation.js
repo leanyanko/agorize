@@ -17,8 +17,12 @@ class Navigation extends React.Component {
     }
 
     getSize() {
-        const s = JSON.parse(localStorage.getItem('ids'));
-        var size = s.length;
+        const s = +localStorage.getItem('size');
+        const size = Number.isNaN(s) ? 0 : s;
+        if (this.state.size !== size)
+        this.setState({size: size});     
+
+
         return size;
     }
 
@@ -30,8 +34,7 @@ class Navigation extends React.Component {
                 <span className="logo">My Shop</span>
                 <div className="nav">
                     <Link to="/products">Products</Link>
-                    <Link to="/cart">Cart({localStorage.getItem('size') ? 
-        JSON.parse(localStorage.getItem('size')) : 0 })</Link>
+                    <Link to="/cart">Cart({ this.getSize })</Link>
                 </div>
                 
             </div>
