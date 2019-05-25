@@ -7,9 +7,9 @@ class Item extends React.Component {
         this.state = { }
     }
 
-    remove() {
+    remove(id) {
         console.log('rem', this.props.id);
-        this.props.remove(this.props.id);
+        this.props.remove(id);
     }
 
 
@@ -17,7 +17,7 @@ class Item extends React.Component {
         return (
             <div className="item">
             <div className="amount">X{this.props.amount}</div>
-                <img src={this.props.img} width="100%"/>
+                <img src={this.props.img} />
                 <div className="">
                    {this.props.name}
                    <div className="description">
@@ -25,7 +25,7 @@ class Item extends React.Component {
                    </div> 
                    
                 </div>
-                <button onClick={() => this.remove()}>REMOVE</button>
+                <button onClick={() => this.remove(this.props.id)}>REMOVE</button>
             </div>
         );
     }
