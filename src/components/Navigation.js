@@ -9,7 +9,7 @@ class Navigation extends React.Component {
         this.state = {
             size: 0
         }
-        this.getSize.bind(this);
+        this.getSize = this.getSize.bind(this);
     }
 
     componentDidMount() {
@@ -21,7 +21,7 @@ class Navigation extends React.Component {
         const size = Number.isNaN(s) ? 0 : s;
         if (this.state.size !== size)
         this.setState({size: size});     
-
+        console.log(size);
 
         return size;
     }
@@ -29,12 +29,13 @@ class Navigation extends React.Component {
     render() {
         // const size = JSON.parse(localStorage.getItem('ids')) ? 
         // JSON.parse(localStorage.getItem('ids')).length : 0 ;
+        const size = this.getSize();
         return (
             <div className="container">
                 <span className="logo">My Shop</span>
                 <div className="nav">
                     <Link to="/products">Products</Link>
-                    <Link to="/cart">Cart({ this.getSize })</Link>
+                    <Link to="/cart">Cart({ size })</Link>
                 </div>
                 
             </div>
