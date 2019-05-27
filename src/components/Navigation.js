@@ -35,7 +35,7 @@ class Navigation extends React.Component {
                 <span className="logo">My Shop</span>
                 <div className="nav">
                     <Link to="/products">Products</Link>
-                    <Link to="/cart">Cart({ size })</Link>
+                    <Link to="/cart">Cart({ this.state.size })</Link>
                 </div>
                 
             </div>
