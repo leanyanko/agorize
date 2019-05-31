@@ -1,3 +1,5 @@
+![cover](https://github.com/meinou/agorize/blob/master/cover.jpg?raw=true)
+
 This project was created with react. Redux is to be added soon
 
 ## Available Scripts
